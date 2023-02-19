@@ -1,4 +1,4 @@
-# Dice_simulator
+# Dice Simulator v1.1
 Dice simulator app made in Python with PySimGUI
 
 - remembers rolled numbers

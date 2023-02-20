@@ -1,5 +1,5 @@
 # Dice Simulator v2.0
-- added function that uses random.org to roll the dice
+- added function that uses random.org API to roll the dice
 
 # Dice Simulator v1.1
 Dice simulator app made in Python with PySimGUI

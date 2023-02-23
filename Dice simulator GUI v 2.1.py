@@ -59,7 +59,7 @@ while True:
             url = 'https://api.random.org/json-rpc/1/invoke'
             data = {'jsonrpc': '2.0',
                     'method': 'generateIntegers',
-                    'params': {'apiKey': 'a25c68b0-8cda-4eee-a558-448642f4420d',
+                    'params': {'apiKey': 'YourKey',
                                'n': 1, 'min': 1, 'max': 6,
                                'base': 10}, 'id': 1}
 

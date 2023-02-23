@@ -88,7 +88,11 @@ while True:
         # Append result to list of strings and list of integers
         dice_list.append(str(dice))
         dice_list_int.append(dice)
-
+        
+        # List scroll
+        if len(dice_list) > 18:
+            del(dice_list[0])
+        
         # Count sum of list with integers
         sum_of_rolls = sum(dice_list_int)
 

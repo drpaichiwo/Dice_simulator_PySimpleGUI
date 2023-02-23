@@ -11,7 +11,7 @@ def create_window():
     # Theme
     sg.theme("black")
     # Font
-    f = "Young 12"
+    f = "Young 10"
 
     # App layout
     layout = [
@@ -35,7 +35,7 @@ def create_window():
     ]  # rows
 
     return sg.Window(
-        "Stopwatch", layout, size=(300, 500),
+        "Stopwatch", layout, size=(300, 550),
         no_titlebar=True, element_justification="center")
 
 
@@ -97,7 +97,7 @@ while True:
 
         # Display results
         window["-OUTPUT-"].update(output_msg, size=(200, 200))
-        window["-ROLLED-"].update(rolled_numbers)
-        window["-AVG-"].update(round(sum_of_rolls / number_of_rolls, 3))
+        window["-ROLLED-"].update(rolled_numbers, font="Young 12")
+        window["-AVG-"].update(round(sum_of_rolls / number_of_rolls, 3), font="Young 12")
 
 window.close()

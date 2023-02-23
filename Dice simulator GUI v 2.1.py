@@ -65,8 +65,8 @@ while True:
 
             params = json.dumps(data)
             response = requests.post(url, params)
-            json_dice = response.json()
-            final = json_dice['result']['random']['data']
+            json_dict = response.json()
+            final = json_dict['result']['random']['data']
             dice = final[0]
 
         # Error handling

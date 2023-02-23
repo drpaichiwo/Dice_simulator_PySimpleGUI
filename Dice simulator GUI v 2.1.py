@@ -1,4 +1,4 @@
-# Dice Simulator v2.2
+# Dice Simulator v2.1
 import random
 import json
 import requests
@@ -16,16 +16,16 @@ def create_window():
     # App layout
     layout = [
         [sg.Push(), sg.Image("images/CloseWindow.png", pad=0, enable_events=True, key="-CLOSE-")],
-        [sg.Text(f"DICE SIMULATOR v2.1", font=f)],
+        [sg.Push(), sg.Text("v2.1", font=f)],
 
         [sg.VPush()],
-        [sg.Image(dice_images.dice_art_dict[1], key="-OUTPUT-", size=(150, 150))],
+        [sg.Image(dice_images.dice_art_dict[7], key="-OUTPUT-", size=(200, 200))],
         [sg.VPush()],
 
         [sg.Text("PRESS ROLL TO PLAY", font=f)],
         [sg.VPush()],
         [sg.Button("ROLL", key="-ROLL-", border_width=0, size=(5, 2),
-                   button_color=('white', "red"), font="Young 12")],
+                   button_color=('white', "red"), font="Young 16")],
         [sg.VPush()],
         [sg.Text("ROLLED NUMBERS:", font=f)],
         [sg.Text("", key="-ROLLED-", font=f)],
@@ -59,7 +59,7 @@ while True:
             url = 'https://api.random.org/json-rpc/1/invoke'
             data = {'jsonrpc': '2.0',
                     'method': 'generateIntegers',
-                    'params': {'apiKey': 'YourKey',
+                    'params': {'apiKey': 'a25c68b0-8cda-4eee-a558-448642f4420d',
                                'n': 1, 'min': 1, 'max': 6,
                                'base': 10}, 'id': 1}
 
@@ -96,7 +96,7 @@ while True:
         rolled_numbers = ", ".join(dice_list)
 
         # Display results
-        window["-OUTPUT-"].update(output_msg, size=(150, 150))
+        window["-OUTPUT-"].update(output_msg, size=(200, 200))
         window["-ROLLED-"].update(rolled_numbers)
         window["-AVG-"].update(round(sum_of_rolls / number_of_rolls, 3))
 

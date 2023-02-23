@@ -11,7 +11,7 @@ def create_window():
     # Theme
     sg.theme("black")
     # Font
-    f = "Young 10"
+    f = "Young 10"    # https://www.dafont.com/young.font
 
     # App layout
     layout = [

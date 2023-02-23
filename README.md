@@ -1,4 +1,4 @@
-# Dice Simulator v2.2
+# Dice Simulator v2.1
 - implemented Errors handling
 - changed the way of getting a value from [random.org](https://www.random.org/)
 - replaced ascii art with PNG files
